@@ -7,7 +7,7 @@
     <script>
         async function pandaClick() {
             const elements = document.querySelectorAll('[id^="checkbox"]');
-            elements.forEach(e => {
+            for (e of elements) {
                 if (e.checked) {
                     const file = e.value;
                     const a = document.createElement('a');
@@ -17,7 +17,7 @@
                     a.click();
                     document.body.removeChild(a);
                 }
-            });
+            }
         }
     </script>
 </head>
